@@ -8,7 +8,13 @@ const port = 5000;
 
 // Connect to MongoDB
 connectToMongo();
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",   // for local dev
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
