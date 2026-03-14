@@ -11,7 +11,7 @@ connectToMongo();
 // List of allowed origins
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://inotebookv2.vercel.app/',
+  'https://inotebookv2.vercel.app',
 
 ];
 
