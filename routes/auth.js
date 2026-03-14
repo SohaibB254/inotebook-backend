@@ -8,7 +8,7 @@ const User = require("../models/User"); //mongoose model
 
 //Creating a fake secret string to deal between client and server to identify wether the token is already taken or not or wether a user tries to access info of another user
 const JWT_SECRET = process.env.JWT_SECRET;
-//Rout 1: Create a User using: POST "/api/auth/createuser". No login required
+//Route 1: Create a User using: POST "/api/auth/createuser". No login required
 router.post(
   "/signup",
   [
