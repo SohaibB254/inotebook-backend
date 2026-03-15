@@ -8,25 +8,11 @@ const port = 3000;
 
 // Connect to MongoDB
 connectToMongo();
-// List of allowed origins
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://inotebookv2.vercel.app',
 
-];
 
 // Configure CORS dynamically
 app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
-    if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: ['http://localhost:3000','https://inotebookv2.vercel.app'],
   credentials: true // if you need cookies or auth headers
 }));
 
